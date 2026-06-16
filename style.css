@@ -1,8 +1,7 @@
-/* Общи стилове */
 body {
     background-color: #121214;
     color: #ffffff;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 20px;
 }
 
@@ -14,11 +13,13 @@ header {
     padding: 15px 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    border: 1px solid #2d2d35;
 }
 
 .wallet {
     font-size: 1.2rem;
     color: #ffd700;
+    font-weight: bold;
 }
 
 section {
@@ -26,30 +27,56 @@ section {
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    border: 1px solid #2d2d35;
 }
 
-/* Списък с карти */
 .products-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
 }
 
 .product-card {
     background-color: #252529;
     border: 1px solid #3a3a42;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 15px;
-    width: 200px;
+    width: 220px;
     text-align: center;
 }
+
+/* LEVEL 1: Стилове за картинката */
+.product-img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin: 10px 0;
+    background-color: #1a1a1e;
+    border-radius: 6px;
+}
+
+/* LEVEL 2: Цветове за Рядкост (Rarity Badges) */
+.rarity {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.common { background-color: #808080; color: #fff; }
+.rare { background-color: #0070dd; color: #fff; }
+.epic { background-color: #a335ee; color: #fff; }
+.legendary { background-color: #ff8000; color: #fff; box-shadow: 0 0 8px #ff8000; }
 
 button {
     background-color: #00bcff;
     color: white;
     border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     width: 100%;
@@ -60,7 +87,6 @@ button:hover {
     background-color: #009ad4;
 }
 
-/* Инвентар */
 .inventory-list {
     display: flex;
     flex-wrap: wrap;
@@ -71,7 +97,7 @@ button:hover {
     background-color: #252529;
     padding: 8px 12px;
     border-radius: 4px;
-    border-left: 4px solid #00bcff;
+    font-weight: bold;
 }
 
 .empty-msg {
