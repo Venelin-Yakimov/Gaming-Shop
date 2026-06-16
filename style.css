@@ -1,8 +1,11 @@
+/* Общи геймърски стилове за тъмна тема */
 body {
     background-color: #121214;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 header {
@@ -30,85 +33,10 @@ section {
     border: 1px solid #2d2d35;
 }
 
-.products-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.product-card {
-    background-color: #252529;
-    border: 1px solid #3a3a42;
-    border-radius: 8px;
-    padding: 15px;
-    width: 220px;
-    text-align: center;
-}
-
-/* LEVEL 1: Стилове за картинката */
-.product-img {
-    width: 100%;
-    height: 120px;
-    object-fit: contain;
-    margin: 10px 0;
-    background-color: #1a1a1e;
-    border-radius: 6px;
-}
-
-/* LEVEL 2: Цветове за Рядкост (Rarity Badges) */
-.rarity {
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.common { background-color: #808080; color: #fff; }
-.rare { background-color: #0070dd; color: #fff; }
-.epic { background-color: #a335ee; color: #fff; }
-.legendary { background-color: #ff8000; color: #fff; box-shadow: 0 0 8px #ff8000; }
-
-button {
-    background-color: #00bcff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #009ad4;
-}
-
-.inventory-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.inventory-item {
-    background-color: #252529;
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-.empty-msg {
-    color: #888;
-    font-style: italic;
-}
-
-/* LEVEL 3: Стилове за Loot Box секцията */
+/* LEVEL 3: Секция за Loot Box */
 .lootbox-section {
     text-align: center;
-    border: 2px dashed #e67e22; /* Оранжев пунктиран кант за акцент */
+    border: 2px dashed #e67e22; /* Оранжев пунктиран кант */
 }
 
 .btn-lootbox {
@@ -128,4 +56,95 @@ button:hover {
     font-size: 1.2rem;
     font-weight: bold;
     min-height: 30px;
+}
+
+/* Грид за подреждане на картите */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* LEVEL 4: Анимирани карти */
+.product-card {
+    background-color: #252529;
+    border: 1px solid #3a3a42;
+    border-radius: 8px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    
+    /* Плавен преход при посочване с мишката */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ефекти при посочване (Hover) */
+.product-card:hover {
+    transform: scale(1.05); /* Увеличаване с 5% */
+    border-color: #00bcff;  /* Смяна на рамката в синьо */
+    box-shadow: 0 0 15px rgba(0, 188, 255, 0.4); /* Син неонов Glow ефект */
+}
+
+/* LEVEL 1: Стилове за снимката на продукта */
+.product-img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin: 10px 0;
+    background-color: #1a1a1e;
+    border-radius: 6px;
+}
+
+/* LEVEL 2: Цветове за значките за рядкост (Rarity System) */
+.rarity {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.common { background-color: #808080; color: #fff; }
+.rare { background-color: #0070dd; color: #fff; }
+.epic { background-color: #a335ee; color: #fff; }
+.legendary { background-color: #ff8000; color: #fff; box-shadow: 0 0 8px #ff8000; }
+
+/* Общи бутони за покупка */
+button {
+    background-color: #00bcff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #009ad4;
+}
+
+/* Списък на инвентара */
+.inventory-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.inventory-item {
+    background-color: #252529;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.empty-msg {
+    color: #888;
+    font-style: italic;
 }
