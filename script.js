@@ -97,5 +97,22 @@ openBoxBtn.addEventListener("click", () => {
     }
 });
 
+// Challenge 2: Логика за Search Bar
+const searchBar = document.getElementById("searchBar");
+
+searchBar.addEventListener("input", (e) => {
+    // Взимаме текста, който потребителят пише, и го правим с малки букви
+    const searchTerm = e.target.value.toLowerCase();
+    
+    // Филтрираме масива с продукти според написаното име
+    const filteredProducts = products.filter(product => 
+        product.name.toLowerCase().includes(searchTerm)
+    );
+    
+    // Преначертаваме магазина само с филтрираните продукти
+    displayProducts(filteredProducts);
+});
+
+
 
 displayProducts();
