@@ -165,3 +165,28 @@ button:hover {
 .search-container input:focus {
     border-color: #00bcff;
 }
+
+/* Challenge 3: Стилове за зачеркната стара цена и червен бадж */
+.product-card {
+    position: relative; /* Нужно за позиционирането на баджа за намаление */
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+.discount-badge {
+    background-color: #ff3333;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    box-shadow: 0 0 5px rgba(255, 51, 51, 0.5);
+}
