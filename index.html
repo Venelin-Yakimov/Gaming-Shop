@@ -7,12 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <h1>🎮 Game Skin Shop</h1>
+        <div class="wallet">
+            <span>Твоите монети: </span><strong id="coinCount">1000</strong> 🪙
+        </div>
     </header>
+
     <main>
-        <p>Магазинът се зарежда...</p>
+        <!-- Секция Магазин -->
+        <section class="shop-section">
+            <h2>Магазин за скинове</h2>
+            <div id="productsGrid" class="products-grid">
+                <!-- Картите ще се заредят тук автоматично чрез JS -->
+            </div>
+        </section>
+
+        <!-- Секция Инвентар -->
+        <section class="inventory-section">
+            <h2>Твоят инвентар (<span id="inventoryCount">0</span>)</h2>
+            <div id="inventoryList" class="inventory-list">
+                <p id="emptyMsg" class="empty-msg">Инвентарът ти е празен.</p>
+            </div>
+        </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>

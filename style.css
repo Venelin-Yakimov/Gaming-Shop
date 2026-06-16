@@ -1,6 +1,80 @@
+/* Общи стилове */
 body {
     background-color: #121214;
     color: #ffffff;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1e;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.wallet {
+    font-size: 1.2rem;
+    color: #ffd700;
+}
+
+section {
+    background-color: #1a1a1e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Списък с карти */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.product-card {
+    background-color: #252529;
+    border: 1px solid #3a3a42;
+    border-radius: 6px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+button {
+    background-color: #00bcff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #009ad4;
+}
+
+/* Инвентар */
+.inventory-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.inventory-item {
+    background-color: #252529;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border-left: 4px solid #00bcff;
+}
+
+.empty-msg {
+    color: #888;
+    font-style: italic;
 }
