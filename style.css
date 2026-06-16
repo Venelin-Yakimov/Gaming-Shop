@@ -190,3 +190,38 @@ button:hover {
     right: 10px;
     box-shadow: 0 0 5px rgba(255, 51, 51, 0.5);
 }
+
+/* Challenge 1: Стилове за профила и аватара */
+.player-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-img {
+    width: 50px;
+    height: 50px;
+    background-color: #252529;
+    border: 2px solid #00bcff;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.player-name {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.btn-small {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    margin-top: 0;
+    width: auto;
+    background-color: #3a3a42;
+}
+
+.btn-small:hover {
+    background-color: #4e4e58;
+}
