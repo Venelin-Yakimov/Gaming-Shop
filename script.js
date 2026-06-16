@@ -69,5 +69,33 @@ function updateUI() {
         });
     }
 }
+// LEVEL 3: Логика за Random Loot Box
+const openBoxBtn = document.getElementById("openBoxBtn");
+const lootboxResult = document.getElementById("lootboxResult");
+
+openBoxBtn.addEventListener("click", () => {
+    const boxPrice = 200; // Цена на кутията
+    
+    // Проверка за достатъчно монети
+    if (coins >= boxPrice) {
+        coins -= boxPrice; // Таксуваме играча
+        
+        // Генериране на случаен индекс от масива с продукти
+        const randomIndex = Math.floor(Math.random() * products.length);
+        const reward = products[randomIndex]; // Избиране на произволен предмет
+        
+        // Автоматично добавяне в инвентара
+        inventory.push({ name: reward.name, rarity: reward.rarity });
+        
+        // Визуализиране на резултата на екрана
+        lootboxResult.innerHTML = `🎉 Спечели: <span class="rarity ${reward.rarity}">${reward.name}</span>`;
+        
+        // Обновяване на монетите и инвентара на екрана
+        updateUI();
+    } else {
+        alert("Нямате достатъчно монети за Loot Box!");
+    }
+});
+
 
 displayProducts();

@@ -104,3 +104,28 @@ button:hover {
     color: #888;
     font-style: italic;
 }
+
+/* LEVEL 3: Стилове за Loot Box секцията */
+.lootbox-section {
+    text-align: center;
+    border: 2px dashed #e67e22; /* Оранжев пунктиран кант за акцент */
+}
+
+.btn-lootbox {
+    background-color: #e67e22;
+    font-size: 1.1rem;
+    max-width: 300px;
+    margin: 15px auto;
+    display: block;
+}
+
+.btn-lootbox:hover {
+    background-color: #d35400;
+}
+
+.lootbox-result {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 30px;
+}
